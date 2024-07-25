@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe to My YouTube Channel</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    <center>
+        <img src="a.PNG" alt="a.png" style="height: 190px; width: 190px; border-radius: 100%;">
+        <br>
+        <span style="background-color: red; border-radius: 7px; font-size: 60px;">EternalHacker Pro</span>
+ <br><br><br>  
+   <script>
+        function showConfirmation() {
+            document.getElementById('subscribe-section').classList.add('hidden');
+            document.getElementById('confirmation-section').classList.remove('hidden');
+        }
+
+        function confirmSubscription() {
+            const email = document.getElementById('email').value;
+            if (email) {
+                document.getElementById('confirmation-section').classList.add('hidden');
+                document.getElementById('final-section').classList.remove('hidden');
+            } else {
+                alert('Please enter your email to confirm subscription.');
+            }
+        }
+    </script>
+</head>
+<body style="background-color: black;">
+    <div id="subscribe-section">
+        <h1 style="background-color: red; border-radius: 7px; font-size: 40px;">Subscribe My Channel</h1>
+        <button onclick="window.location.href='YOUR_YOUTUBE_CHANNEL_URL'; showConfirmation();"
+        style="height: 50px; width: 100px; background-color: rgb(253, 0, 0); border-radius: 7px;"  >Subscribe</button>
+    </div>
+
+    <div id="confirmation-section" class="hidden">
+        <h2>Confirm Your Subscription</h2>
+        <p  style="background-color: red; border-radius: 7px; font-size: 40px;">Confirmation.</p>
+        <button onclick="confirmSubscription()" onclick="window.location.href='llllsdshjg';" onclick="window.location.href='YOUR_YOUTUBE_CHANNEL_URL'; "
+       style="height: 50px; width: 100px; background-color: rgb(253, 0, 0); border-radius: 7px;"  >conferm</button>
+        <br><br><br>
+        <input type="email" id="email" placeholder="Enter your email" style="background-color: red; border-radius: 7px; font-size: 40px; opacity: 0;">
+        
+        
+    </div>
+   
+    <div  id="final-section" class="hidden">
+        <h2>Thank you for subscribing!</h2>
+        <p style="background-color: red; border-radius: 7px; font-size: 40px;">Here is your special link: <br> <a href="YOUR_SPECIAL_LINK_URL">Get link</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe and Redirect</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://apis.google.com/js/platform.js"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h1 class="text-2xl font-bold mb-4">Subscribe to our YouTube Channel</h1>
+        <div class="mb-4">
+            <!-- YouTube Subscribe Button -->
+            <div class="g-ytsubscribe" data-channelid="YOUR_CHANNEL_ID" data-layout="default" data-count="hidden"></div>
+        </div>
+        <button id="confirm-subscription-button" class="bg-red-500 text-white px-4 py-2 rounded">I Subscribed</button>
+    </div>
+
+    <script>
+        document.getElementById('confirm-subscription-button').addEventListener('click', function () {
+            var redirectUrl = 'https://www.yourredirectlink.com';
+            window.location.href = redirectUrl;
+        });
+    </script>
+</body>
+</html>
